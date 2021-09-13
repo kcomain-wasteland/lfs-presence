@@ -1,0 +1,18 @@
+[[package]]
+name = "pypresence"
+version = "4.2.0"
+description = "Discord RPC client written in Python"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.9"
+content-hash = "43b79efb1e28e8640e7b7eef5c26f39825e8fd2f087333ec2bd09a23ee03b84d"
+
+[metadata.files]
+pypresence = [
+    {file = "pypresence-4.2.0-py2.py3-none-any.whl", hash = "sha256:f477a874c4164193e47f7144d726b0ba2fe69afa2807e3bd944efe4c4c137fac"},
+    {file = "pypresence-4.2.0.tar.gz", hash = "sha256:54618a18085d104aa063df8296dac95cf01b922ed8aab4b021f71718bb3f19b1"},
+]
