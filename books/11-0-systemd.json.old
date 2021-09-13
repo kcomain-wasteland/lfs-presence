@@ -1,0 +1,106 @@
+{
+    "version": 0,
+    "edition": "11.0-systemd",
+    "book": "https://www.linuxfromscratch.org/lfs/downloads/11.0-systemd/LFS-BOOK-11.0-NOCHUNKS.html",
+
+    "chapters": {
+        "0": {
+            "name": "Preface",
+            "prefix": "pre-",
+            "sections": [
+                {"foreword": "Foreword"},
+                {"audience": "Audience"},
+                {"architecture": "LFS Target Architectures"},
+                {"prerequisites": "Prerequisites"},
+                {"standards": "LFS and Standards"},
+                {"why": "Rationale for Packages in the Book"},
+                {"typography": "Typography"},
+                {"organization": "Structure"},
+                {"errata": "Errata and Security Advisories"}
+            ]
+        },
+        "1": {
+            "name": "Introduction",
+            "prefix": "ch-intro-",
+            "sections": [
+                {"how": "How to Build an LFS System"},
+                {"whatsnew": "What's new since the last release"},
+                {"changelog": "Changelog"},
+                {"resources": "Resources"},
+                {"askforhelp": "Help"}
+            ]
+        },
+        "2": {
+            "name": "Preparing for the Build",
+            "prefix": null,
+            "subchapters": [
+                {
+                    "name": "Preparing the Host System",
+                    "prefix": "ch-partitioning-",
+                    "sections": [
+                        {"introduction": "Introduction"},
+                        {"reqs": "Host System Requirements"},
+                        {"stages": "Building LFS in Stages"},
+                        {"creatingpartition": "Creating a New Partition"},
+                        {"creatingfilesystem": "Creating a File System on the Partition"},
+                        {"aboutlfs": "Setting The $LFS Variable"},
+                        {"mounting": "Mounting the New Partition"}
+                    ]
+                }, {
+                    "name": "Packages and Patches",
+                    "prefix": "ch-materials-",
+                    "sections": [
+                        {"introduction": "Introduction"},
+                        {"packages": "All Packages"},
+                        {"patches": "Needed Patches"}
+                    ]
+                }, {
+                    "name": "Final Preparations",
+                    "prefix": "ch-preps-",
+                    "sections": [
+                        {"introduction": "Introduction"},
+                        {"creatingminlayout": "Creating a limited directory layout in LFS filesystem", "prefix": "ch-tools-"},
+                        {"addinguser": "Adding the LFS User"},
+                        {"settingenviron": "Setting Up the Environment"},
+                        {"aboutsbus": "About SBUs"},
+                        {"abouttestsuites": "About the Test Suites"}
+                    ]
+                }
+            ]
+        },
+        "3": {
+            "name": "Building the LFS Cross Toolchain and Temporary Tools",
+            "prefix": null,
+            "subchapters": [
+                {
+                    "name": "Important Preliminary Material",
+                    "prefix": "ch-tools-",
+                    "sections": [
+                        {"intro": "Introduction", "prefix": "ch-part3intro-"},
+                        {"toolchaintechnotes": "Toolchain Technical Notes"},
+                        {"generalinstructions": "General Compilation Instructions"}
+                    ]
+                }, {
+                    "name": "Compiling a Cross-Toolchain",
+                    "prefix": "ch-materials-",
+                    "sections": [
+                        {"introduction": "Introduction"},
+                        {"packages": "All Packages"},
+                        {"patches": "Needed Patches"}
+                    ]
+                }, {
+                    "name": "Final Preparations",
+                    "prefix": "ch-preps-",
+                    "sections": [
+                        {"introduction": "Introduction"},
+                        {"creatingminlayout": "Creating a limited directory layout in LFS filesystem", "prefix": "ch-tools-"},
+                        {"addinguser": "Adding the LFS User"},
+                        {"settingenviron": "Setting Up the Environment"},
+                        {"aboutsbus": "About SBUs"},
+                        {"abouttestsuites": "About the Test Suites"}
+                    ]
+                }
+            ]
+        }
+    }
+}

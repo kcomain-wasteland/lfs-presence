@@ -1,0 +1,528 @@
+{
+    "version": 1,
+    "edition": "7.1",
+    "book": "https://www.linuxfromscratch.org/lfs/downloads/7.1/LFS-BOOK-7.1-NOCHUNKS.html",
+    "chapters": [
+        {
+            "name": "Preface",
+            "subchapters": [
+                {
+                    "name": " Preface",
+                    "sections": [
+                        {
+                            "#pre-foreword": "Foreword"
+                        },
+                        {
+                            "#pre-audience": "Audience"
+                        },
+                        {
+                            "#pre-architecture": "LFS Target Architectures"
+                        },
+                        {
+                            "#pre-standards": "LFS and Standards"
+                        },
+                        {
+                            "#pre-why": "Rationale for Packages in the Book"
+                        },
+                        {
+                            "#pre-prerequisites": "Prerequisites"
+                        },
+                        {
+                            "#pre-hostreqs": "Host System Requirements"
+                        },
+                        {
+                            "#pre-typography": "Typography"
+                        },
+                        {
+                            "#pre-organization": "Structure"
+                        },
+                        {
+                            "#pre-errata": "Errata"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Introduction",
+            "subchapters": [
+                {
+                    "name": " Introduction",
+                    "sections": [
+                        {
+                            "#ch-intro-how": "How to Build an LFS System"
+                        },
+                        {
+                            "#ch-intro-whatsnew": "What's new since the last release"
+                        },
+                        {
+                            "#ch-scatter-changelog": "Changelog"
+                        },
+                        {
+                            "#ch-intro-resources": "Resources"
+                        },
+                        {
+                            "#ch-intro-askforhelp": "Help"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Preparing for the Build",
+            "subchapters": [
+                {
+                    "name": " Preparing a New Partition",
+                    "sections": [
+                        {
+                            "#space-introduction": "Introduction"
+                        },
+                        {
+                            "#space-creatingpartition": "Creating a New Partition"
+                        },
+                        {
+                            "#space-creatingfilesystem": "Creating a File System on the Partition"
+                        },
+                        {
+                            "#space-mounting": "Mounting the New Partition"
+                        }
+                    ]
+                },
+                {
+                    "name": " Packages and Patches",
+                    "sections": [
+                        {
+                            "#materials-introduction": "Introduction"
+                        },
+                        {
+                            "#materials-packages": "All Packages"
+                        },
+                        {
+                            "#materials-patches": "Needed Patches"
+                        }
+                    ]
+                },
+                {
+                    "name": " Final Preparations",
+                    "sections": [
+                        {
+                            "#prepare-aboutlfs": "About $LFS"
+                        },
+                        {
+                            "#ch-tools-creatingtoolsdir": "Creating the $LFS/tools Directory"
+                        },
+                        {
+                            "#ch-tools-addinguser": "Adding the LFS User"
+                        },
+                        {
+                            "#ch-tools-settingenviron": "Setting Up the Environment"
+                        },
+                        {
+                            "#prepare-aboutsbus": "About SBUs"
+                        },
+                        {
+                            "#prepare-abouttestsuites": "About the Test Suites"
+                        }
+                    ]
+                },
+                {
+                    "name": " Constructing a Temporary System",
+                    "sections": [
+                        {
+                            "#ch-tools-introduction": "Introduction"
+                        },
+                        {
+                            "#ch-tools-toolchaintechnotes": "Toolchain Technical Notes"
+                        },
+                        {
+                            "#ch-tools-generalinstructions": "General Compilation Instructions"
+                        },
+                        {
+                            "#ch-tools-binutils-pass1": "Binutils-2.22 - Pass 1"
+                        },
+                        {
+                            "#ch-tools-gcc-pass1": "GCC-4.6.2 - Pass 1"
+                        },
+                        {
+                            "#ch-tools-linux-headers": "Linux-3.2.6 API Headers"
+                        },
+                        {
+                            "#ch-tools-glibc": "Glibc-2.14.1"
+                        },
+                        {
+                            "#ch-tools-adjusting": "Adjusting the Toolchain"
+                        },
+                        {
+                            "#ch-tools-binutils-pass2": "Binutils-2.22 - Pass 2"
+                        },
+                        {
+                            "#ch-tools-gcc-pass2": "GCC-4.6.2 - Pass 2"
+                        },
+                        {
+                            "#ch-tools-tcl": "Tcl-8.5.11"
+                        },
+                        {
+                            "#ch-tools-expect": "Expect-5.45"
+                        },
+                        {
+                            "#ch-tools-dejagnu": "DejaGNU-1.5"
+                        },
+                        {
+                            "#ch-tools-check": "Check-0.9.8"
+                        },
+                        {
+                            "#ch-tools-ncurses": "Ncurses-5.9"
+                        },
+                        {
+                            "#ch-tools-bash": "Bash-4.2"
+                        },
+                        {
+                            "#ch-tools-bzip2": "Bzip2-1.0.6"
+                        },
+                        {
+                            "#ch-tools-coreutils": "Coreutils-8.15"
+                        },
+                        {
+                            "#ch-tools-diffutils": "Diffutils-3.2"
+                        },
+                        {
+                            "#ch-tools-file": "File-5.10"
+                        },
+                        {
+                            "#ch-tools-findutils": "Findutils-4.4.2"
+                        },
+                        {
+                            "#ch-tools-gawk": "Gawk-4.0.0"
+                        },
+                        {
+                            "#ch-tools-gettext": "Gettext-0.18.1.1"
+                        },
+                        {
+                            "#ch-tools-grep": "Grep-2.10"
+                        },
+                        {
+                            "#ch-tools-gzip": "Gzip-1.4"
+                        },
+                        {
+                            "#ch-tools-m4": "M4-1.4.16"
+                        },
+                        {
+                            "#ch-tools-make": "Make-3.82"
+                        },
+                        {
+                            "#ch-tools-patch": "Patch-2.6.1"
+                        },
+                        {
+                            "#ch-tools-perl": "Perl-5.14.2"
+                        },
+                        {
+                            "#ch-tools-sed": "Sed-4.2.1"
+                        },
+                        {
+                            "#ch-tools-tar": "Tar-1.26"
+                        },
+                        {
+                            "#ch-tools-texinfo": "Texinfo-4.13a"
+                        },
+                        {
+                            "#ch-tools-xz": "Xz-5.0.3"
+                        },
+                        {
+                            "#ch-tools-stripping": "Stripping"
+                        },
+                        {
+                            "#ch-tools-changingowner": "Changing Ownership"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Building the LFS System",
+            "subchapters": [
+                {
+                    "name": " Installing Basic System Software",
+                    "sections": [
+                        {
+                            "#ch-system-introduction": "Introduction"
+                        },
+                        {
+                            "#ch-system-kernfs": "Preparing Virtual Kernel File Systems"
+                        },
+                        {
+                            "#ch-system-pkgmgt": "Package Management"
+                        },
+                        {
+                            "#ch-system-chroot": "Entering the Chroot Environment"
+                        },
+                        {
+                            "#ch-system-creatingdirs": "Creating Directories"
+                        },
+                        {
+                            "#ch-system-createfiles": "Creating Essential Files and Symlinks"
+                        },
+                        {
+                            "#ch-system-linux-headers": "Linux-3.2.6 API Headers"
+                        },
+                        {
+                            "#ch-system-man-pages": "Man-pages-3.35"
+                        },
+                        {
+                            "#ch-system-glibc": "Glibc-2.14.1"
+                        },
+                        {
+                            "#ch-system-readjusting": "Re-adjusting the Toolchain"
+                        },
+                        {
+                            "#ch-system-zlib": "Zlib-1.2.6"
+                        },
+                        {
+                            "#ch-system-file": "File-5.10"
+                        },
+                        {
+                            "#ch-system-binutils": "Binutils-2.22"
+                        },
+                        {
+                            "#ch-system-gmp": "GMP-5.0.4"
+                        },
+                        {
+                            "#ch-system-mpfr": "MPFR-3.1.0"
+                        },
+                        {
+                            "#ch-system-mpc": "MPC-0.9"
+                        },
+                        {
+                            "#ch-system-gcc": "GCC-4.6.2"
+                        },
+                        {
+                            "#ch-system-sed": "Sed-4.2.1"
+                        },
+                        {
+                            "#ch-system-bzip2": "Bzip2-1.0.6"
+                        },
+                        {
+                            "#ch-system-ncurses": "Ncurses-5.9"
+                        },
+                        {
+                            "#ch-system-util-linux": "Util-linux-2.20.1"
+                        },
+                        {
+                            "#ch-system-psmisc": "Psmisc-22.15"
+                        },
+                        {
+                            "#ch-system-e2fsprogs": "E2fsprogs-1.42"
+                        },
+                        {
+                            "#ch-system-coreutils": "Coreutils-8.15"
+                        },
+                        {
+                            "#ch-system-iana-etc": "Iana-Etc-2.30"
+                        },
+                        {
+                            "#ch-system-m4": "M4-1.4.16"
+                        },
+                        {
+                            "#ch-system-bison": "Bison-2.5"
+                        },
+                        {
+                            "#ch-system-procps": "Procps-3.2.8"
+                        },
+                        {
+                            "#ch-system-grep": "Grep-2.10"
+                        },
+                        {
+                            "#ch-system-readline": "Readline-6.2"
+                        },
+                        {
+                            "#ch-system-bash": "Bash-4.2"
+                        },
+                        {
+                            "#ch-system-libtool": "Libtool-2.4.2"
+                        },
+                        {
+                            "#ch-system-gdbm": "GDBM-1.10"
+                        },
+                        {
+                            "#ch-system-inetutils": "Inetutils-1.9.1"
+                        },
+                        {
+                            "#ch-system-perl": "Perl-5.14.2"
+                        },
+                        {
+                            "#ch-system-autoconf": "Autoconf-2.68"
+                        },
+                        {
+                            "#ch-system-automake": "Automake-1.11.3"
+                        },
+                        {
+                            "#ch-system-diffutils": "Diffutils-3.2"
+                        },
+                        {
+                            "#ch-system-gawk": "Gawk-4.0.0"
+                        },
+                        {
+                            "#ch-system-findutils": "Findutils-4.4.2"
+                        },
+                        {
+                            "#ch-system-flex": "Flex-2.5.35"
+                        },
+                        {
+                            "#ch-system-gettext": "Gettext-0.18.1.1"
+                        },
+                        {
+                            "#ch-system-groff": "Groff-1.21"
+                        },
+                        {
+                            "#ch-system-xz": "Xz-5.0.3"
+                        },
+                        {
+                            "#ch-system-grub": "GRUB-1.99"
+                        },
+                        {
+                            "#ch-system-gzip": "Gzip-1.4"
+                        },
+                        {
+                            "#ch-system-iproute2": "IPRoute2-3.2.0"
+                        },
+                        {
+                            "#ch-system-kbd": "Kbd-1.15.2"
+                        },
+                        {
+                            "#ch-system-kmod": "Kmod-5"
+                        },
+                        {
+                            "#ch-system-less": "Less-444"
+                        },
+                        {
+                            "#ch-system-libpipeline": "Libpipeline-1.2.0"
+                        },
+                        {
+                            "#ch-system-make": "Make-3.82"
+                        },
+                        {
+                            "#ch-system-man-db": "Man-DB-2.6.1"
+                        },
+                        {
+                            "#ch-system-patch": "Patch-2.6.1"
+                        },
+                        {
+                            "#ch-system-shadow": "Shadow-4.1.5"
+                        },
+                        {
+                            "#ch-system-sysklogd": "Sysklogd-1.5"
+                        },
+                        {
+                            "#ch-system-sysvinit": "Sysvinit-2.88dsf"
+                        },
+                        {
+                            "#ch-system-tar": "Tar-1.26"
+                        },
+                        {
+                            "#ch-system-texinfo": "Texinfo-4.13a"
+                        },
+                        {
+                            "#ch-system-udev": "Udev-181"
+                        },
+                        {
+                            "#ch-system-vim": "Vim-7.3"
+                        },
+                        {
+                            "#ch-system-aboutdebug": "About Debugging Symbols"
+                        },
+                        {
+                            "#ch-system-strippingagain": "Stripping Again"
+                        },
+                        {
+                            "#ch-system-revisedchroot": "Cleaning Up"
+                        }
+                    ]
+                },
+                {
+                    "name": " Setting Up System Bootscripts",
+                    "sections": [
+                        {
+                            "#ch-scripts-introduction": "Introduction"
+                        },
+                        {
+                            "#ch-scripts-network": "General Network Configuration"
+                        },
+                        {
+                            "#ch-scripts-hosts": "Customizing the /etc/hosts File"
+                        },
+                        {
+                            "#ch-scripts-udev": "Device and Module Handling on an LFS System"
+                        },
+                        {
+                            "#ch-scripts-symlinks": "Creating Custom Symlinks to Devices"
+                        },
+                        {
+                            "#ch-scripts-bootscripts": "LFS-Bootscripts-20120229"
+                        },
+                        {
+                            "#ch-scripts-usage": "How Do These Bootscripts Work?"
+                        },
+                        {
+                            "#ch-scripts-hostname": "Configuring the system hostname"
+                        },
+                        {
+                            "#ch-scripts-setclock": "Configuring the setclock Script"
+                        },
+                        {
+                            "#ch-scripts-console": "Configuring the Linux Console"
+                        },
+                        {
+                            "#ch-scripts-sysklogd": "Configuring the sysklogd Script"
+                        },
+                        {
+                            "#ch-scripts-site": "The rc.site File"
+                        },
+                        {
+                            "#ch-scripts-profile": "The Bash Shell Startup Files"
+                        },
+                        {
+                            "#ch-scripts-inputrc": "Creating the /etc/inputrc File"
+                        }
+                    ]
+                },
+                {
+                    "name": " Making the LFS System Bootable",
+                    "sections": [
+                        {
+                            "#ch-bootable-introduction": "Introduction"
+                        },
+                        {
+                            "#ch-bootable-fstab": "Creating the /etc/fstab File"
+                        },
+                        {
+                            "#ch-bootable-kernel": "Linux-3.2.6"
+                        },
+                        {
+                            "#ch-bootable-grub": "Using GRUB to Set Up the Boot Process"
+                        }
+                    ]
+                },
+                {
+                    "name": " The End",
+                    "sections": [
+                        {
+                            "#ch-finish-theend": "The End"
+                        },
+                        {
+                            "#ch-finish-getcounted": "Get Counted"
+                        },
+                        {
+                            "#ch-finish-reboot": "Rebooting the System"
+                        },
+                        {
+                            "#ch-finish-whatnow": "What Now?"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Appendices",
+            "subchapters": []
+        }
+    ]
+}
