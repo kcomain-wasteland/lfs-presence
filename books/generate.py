@@ -14,10 +14,10 @@ source_url = input("URL of the book (NOCHUNKS version, find them "
 
 START = time.time()
 config = {
-    "version": 2,
+    "version": 2.1,
     "edition": "",
     "book": source_url,
-    "chapters": []
+    "chapters": {}
 }
 session = requests.Session()
 session.mount('file://', FileAdapter())
@@ -81,30 +81,39 @@ for i in toc_items:
 statistics = [0, 0, 0]
 
 print("Building full ToC... ")
-for i in toc_items:
+for part_c, i in enumerate(toc_items):
     print(f'Found part {i.h3.string}')
     statistics[0] += 1
     config_item = {
-        'name': i.h3.string.split('. ')[1],
-        'chapters': []
+        'index': part_c,
+        'chapters': {}
     }
-    for chapter in i.ul.find_all('li', class_='chapter', recursive=False):
+    for chapter_c, chapter in enumerate(i.ul.find_all('li', class_=['chapter', 'preface'], recursive=False)):
         chapter.h4.string = ' '.join(chapter.h4.string.split())
         print(f'Found chapter {chapter.h4.string}')
         statistics[1] += 1
         config_chapter = {
-            'name': chapter.h4.string.split('.')[1],
-            'sections': []
+            'index': chapter_c + 1,
+            'sections': {}
         }
-        for section in chapter.ul.find_all('li', class_='sect1', recursive=False):
+        for section_c, section in enumerate(chapter.ul.find_all('li', class_='sect1', recursive=False)):
             section.a.string = ' '.join(section.a.string.split())
+            # config_section = {
+            #     'index': section_c + 1,
+            #     'name': section.a.string
+            # }
             print(f'Found section {section.a.string}')
             statistics[2] += 1
-            config_chapter['sections'].append({section.a['href']: section.a.string})
+            config_chapter['sections'][section.a.string] = section.a['href']  # config_section
 
-        config_item['chapters'].append(config_chapter)
+        desc_l = chapter.h4.string.split('.')
+        if len(desc_l) <= 1:
+            desc = desc_l[0]
+        else:
+            desc = desc_l[1]
+        config_item['chapters'][desc.strip()] = config_chapter
 
-    config['chapters'].append(config_item)
+    config['chapters'][i.h3.string.split('. ')[1]] = config_item
 
 print("Saving ToC json... ")
 with open(f'{edition}.json', 'w+') as file:
