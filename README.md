@@ -4,5 +4,5 @@ cry when it doesn't work and i wasted like 1 month for absolutely nothing
 
 ## Credits
 Icon used in this crappy script
-- Book by Puchong Siengcharee from the Noun Project [[link]](https://thenounproject.com/search/?q=book&i=4189988)
+- Font Awesome Icons (CC-BY 4.0) (converted to PNG format, recolored) [[License]](https://fontawesome.com/license)
 - the Tux by Larry Ewing and The GIMP

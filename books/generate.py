@@ -1,11 +1,11 @@
-import re
 import json
+import re
 import time
-# import warnings
 
 import requests
-from requests_file import FileAdapter
 from bs4 import BeautifulSoup
+from requests_file import FileAdapter
+
 
 VERSION_RE = re.compile(r"^\s*Version (?P<version>.+)\s*$")
 
@@ -14,7 +14,7 @@ source_url = input("URL of the book (NOCHUNKS version, find them "
 
 START = time.time()
 config = {
-    "version": 1,
+    "version": 2,
     "edition": "",
     "book": source_url,
     "chapters": []
@@ -86,7 +86,7 @@ for i in toc_items:
     statistics[0] += 1
     config_item = {
         'name': i.h3.string.split('. ')[1],
-        'subchapters': []
+        'chapters': []
     }
     for chapter in i.ul.find_all('li', class_='chapter', recursive=False):
         chapter.h4.string = ' '.join(chapter.h4.string.split())
@@ -102,7 +102,7 @@ for i in toc_items:
             statistics[2] += 1
             config_chapter['sections'].append({section.a['href']: section.a.string})
 
-        config_item['subchapters'].append(config_chapter)
+        config_item['chapters'].append(config_chapter)
 
     config['chapters'].append(config_item)
 

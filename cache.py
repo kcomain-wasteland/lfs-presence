@@ -3,6 +3,8 @@ import os
 import pickle
 import typing
 
+import questionary
+
 
 def _remove_file(filepath):
     print('[~] removing cache file... ', end='')
@@ -47,3 +49,21 @@ def get_cache(config, sha_512_hash=None) -> typing.Optional[dict]:
 
     print(f'[i] cache hit: ({config})')
     return cache
+
+
+async def save_cache(config, obj):
+    filepath = os.path.join('cache', config + '.xz')
+    if os.path.exists(filepath):
+        overwrite = await questionary.confirm("Cache file exists. Overwrite?", qmark="[?]", default=False).ask_async()
+        if not overwrite:
+            num = 0
+            while True:
+                num += 1
+                if not os.path.exists(filepath + f'.{num}'):
+                    new_filepath = filepath + f'.{num}'
+                    print(f'[~] old cache file will be renamed to {new_filepath}')
+                    os.rename(filepath, new_filepath)
+                    break
+
+    with lzma.open(filepath, 'wb') as lzf:
+        pickle.dump(obj, lzf)
